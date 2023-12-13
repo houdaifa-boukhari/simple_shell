@@ -24,7 +24,7 @@ char	*ft_getenv(char *var_env);
 char	*ft_getpath(char *cmd);
 void	displaye_error(char *name, char *cmd, int index);
 int	built_in(char *cmd);
-void 	handle_cmd(char **cmd, int *status);
+void	handle_cmd(char **cmd, int *status);
 void	displaye_env(char **cmd, int *status);
 void	ft_exit(char **cmd, int *status);
 
