@@ -31,11 +31,12 @@ int main(int argc, char **argv)
 		}
 		idx++;
 		commends = ft_split(line);
-		if (!commends)
-			continue;
-		if (built_in(commends[0]))
-			handle_cmd(commends, &status);
-		else
-			status = ft_execute(commends, argv, idx);
+		if (commends)
+		{
+			if (built_in(commends[0]))
+				handle_cmd(commends, &status);
+			else
+				status = ft_execute(commends, argv, idx);
+		}
 	}
 }

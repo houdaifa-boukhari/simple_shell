@@ -72,6 +72,8 @@ char **ft_split(char *line)
 	if (!str)
 		return (NULL);
 	str = alocate_split(line, str);
+	if (!str)
+		return (NULL);
 	free(line);
 	return (str);
 }

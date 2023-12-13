@@ -41,11 +41,11 @@ char	*ft_itoa(int n)
 	long	nb;
 
 	nb = (long)n;
-	i = lenght(nb) + 1;
-	str = (char *)malloc(sizeof(char) * i);
+	i = lenght(nb);
+	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (str == NULL)
 		return (NULL);
-	str[--i] = '\0';
+	str[i] = '\0';
 	if (nb == 0)
 		str[--i] = '0';
 	if (nb < 0)
